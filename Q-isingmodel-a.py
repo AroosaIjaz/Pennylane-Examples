@@ -43,10 +43,13 @@ def cost(var):
 
 #H = -1(J1*s1*s2 + J2*s2*s3) = -1 (1*1*-1 + -1*-1*-1) = 2 
 
-t1=np.array([0, np.pi, 0])
-t2=np.array([0,np.pi ,0])
+#t1=np.array([0, np.pi, 0])
+#t2=np.array([0,np.pi ,0])
+t1 = np.pi*(np.random.ranf(3))
+t2 = np.pi*(np.random.ranf(3))
 var_init=np.array([t1,t2])
 cost_init= cost(var_init)
+print(var_init)
 print(cost_init)
 
 #Now we optimize using pennylane numpy gradient descent optimizer
